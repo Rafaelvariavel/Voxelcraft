@@ -1,2 +1,19 @@
-- name: Extrair projeto
-  run: unzip luanti-5.16.1.zip
+name: Build VoxelCraft
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extrair projeto
+        run: unzip luanti-5.16.1.zip
+
+      - name: Listar arquivos
+        run: ls -R
