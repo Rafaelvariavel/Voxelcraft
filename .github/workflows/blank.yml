@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - - name: Extrair projeto
-  run: unzip -o voxelcraft-5.16.1-custom.zip
+      - name: Extrair projeto
+        run: unzip -o voxelcraft-5.16.1-custom.zip
 
       - name: Listar arquivos
         run: ls -R
